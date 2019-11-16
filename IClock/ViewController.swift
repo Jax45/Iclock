@@ -10,10 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mainView: MainView!
+    
+    var clockView = ClockView(frame: .zero)
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainView.addSubview(clockView)
+        let displayLink = CADisplayLink(target: self, selector: #selector(updateClock))
+        displayLink.add(to: .current, forMode: .common)
         // Do any additional setup after loading the view.
     }
+    @objc func updateClock(){
+        let clock = mainView.subviews[0] as? ClockView
+        let date = Date()
+        let hour = Calendar.current.component(.hour, from:date)
+        let min = Calendar.current.component(.minute, from:date)
+        let sec = Calendar.current.component(.second, from:date)
+
+        clock?.timePassed(hour: hour, minute: min, second: sec)
+    }
+    
 
 
 }

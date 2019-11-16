@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		445050F8237F6DF600B69F7F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445050F7237F6DF600B69F7F /* MainView.swift */; };
 		44D046AB237F56B000C0F570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046AA237F56B000C0F570 /* AppDelegate.swift */; };
 		44D046AD237F56B000C0F570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046AC237F56B000C0F570 /* SceneDelegate.swift */; };
 		44D046AF237F56B000C0F570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046AE237F56B000C0F570 /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 		44D046B7237F56B200C0F570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D046B5237F56B200C0F570 /* LaunchScreen.storyboard */; };
 		44D046C2237F56B200C0F570 /* IClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046C1237F56B200C0F570 /* IClockTests.swift */; };
 		44D046CD237F56B200C0F570 /* IClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046CC237F56B200C0F570 /* IClockUITests.swift */; };
+		44D046DD237F598900C0F570 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046DC237F598900C0F570 /* ClockView.swift */; };
+		44D046DF237F5A0D00C0F570 /* ClockLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046DE237F5A0D00C0F570 /* ClockLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		445050F7237F6DF600B69F7F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		44D046A7237F56B000C0F570 /* IClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D046AA237F56B000C0F570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D046AC237F56B000C0F570 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		44D046C8237F56B200C0F570 /* IClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D046CC237F56B200C0F570 /* IClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClockUITests.swift; sourceTree = "<group>"; };
 		44D046CE237F56B200C0F570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44D046DC237F598900C0F570 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		44D046DE237F5A0D00C0F570 /* ClockLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockLayer.swift; path = ../../../Downloads/Layers/Layers/ClockLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,12 @@
 		44D046A9237F56B000C0F570 /* IClock */ = {
 			isa = PBXGroup;
 			children = (
-				44D046AA237F56B000C0F570 /* AppDelegate.swift */,
-				44D046AC237F56B000C0F570 /* SceneDelegate.swift */,
+				44D046DB237F580700C0F570 /* Supporting Files */,
 				44D046AE237F56B000C0F570 /* ViewController.swift */,
+				44D046DE237F5A0D00C0F570 /* ClockLayer.swift */,
 				44D046B0237F56B000C0F570 /* Main.storyboard */,
-				44D046B3237F56B200C0F570 /* Assets.xcassets */,
-				44D046B5237F56B200C0F570 /* LaunchScreen.storyboard */,
-				44D046B8237F56B200C0F570 /* Info.plist */,
+				44D046DC237F598900C0F570 /* ClockView.swift */,
+				445050F7237F6DF600B69F7F /* MainView.swift */,
 			);
 			path = IClock;
 			sourceTree = "<group>";
@@ -126,6 +131,18 @@
 				44D046CE237F56B200C0F570 /* Info.plist */,
 			);
 			path = IClockUITests;
+			sourceTree = "<group>";
+		};
+		44D046DB237F580700C0F570 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44D046AA237F56B000C0F570 /* AppDelegate.swift */,
+				44D046AC237F56B000C0F570 /* SceneDelegate.swift */,
+				44D046B3237F56B200C0F570 /* Assets.xcassets */,
+				44D046B5237F56B200C0F570 /* LaunchScreen.storyboard */,
+				44D046B8237F56B200C0F570 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				44D046AF237F56B000C0F570 /* ViewController.swift in Sources */,
+				445050F8237F6DF600B69F7F /* MainView.swift in Sources */,
+				44D046DD237F598900C0F570 /* ClockView.swift in Sources */,
 				44D046AB237F56B000C0F570 /* AppDelegate.swift in Sources */,
+				44D046DF237F5A0D00C0F570 /* ClockLayer.swift in Sources */,
 				44D046AD237F56B000C0F570 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
