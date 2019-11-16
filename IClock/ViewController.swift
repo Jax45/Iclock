@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var mainView: MainView!
+    @IBOutlet weak var hourTen: UILabel!
     
     var clockView = ClockView(frame: .zero)
     override func viewDidLoad() {
