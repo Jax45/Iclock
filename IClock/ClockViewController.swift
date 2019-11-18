@@ -12,7 +12,7 @@ protocol MainViewControllerDelegate {
     func save(timeZone: String);
 }
 
-class ViewController: UIViewController, MainViewControllerDelegate{
+class ClockViewController: UIViewController, MainViewControllerDelegate{
     
     @IBOutlet weak var mainView: MainView!
     @IBOutlet weak var HourLabel: UILabel!
@@ -21,10 +21,12 @@ class ViewController: UIViewController, MainViewControllerDelegate{
     @IBOutlet weak var MilliLabel: UILabel!
     @IBOutlet weak var ampmLabel: UILabel!
     @IBOutlet weak var timeZoneLabel: UILabel!
-    private var calendar = Calendar.current
-    var clockView = ClockView(frame: .zero)
+//    private var calendar = Calendar.current
+    private var clockView = ClockView(frame: .zero)
+    private var model: ClockModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        model = ClockModel()
         mainView.addSubview(clockView)
         let displayLink = CADisplayLink(target: self, selector: #selector(updateClock))
         displayLink.add(to: .current, forMode: .common)
@@ -32,32 +34,14 @@ class ViewController: UIViewController, MainViewControllerDelegate{
     }
     @objc func updateClock(){
         let clock = mainView.subviews[0] as? ClockView
-        let date = Date()
-        
-        var hour = calendar.component(.hour, from:date)
-        let min = calendar.component(.minute, from:date)
-        let sec = calendar.component(.second, from:date)
-        let ns = calendar.component(.nanosecond, from: date)
-        let ms = ns / 1000000
-        
-        
-        MinuteLabel.text = String(min)
-        SecondLabel.text = String(sec)
-        MilliLabel.text = String(ms)
-        if hour - 12 >= 0{
-            hour -= 12
-            if hour == 0{ hour = 12}
-
-            HourLabel.text = String(hour)
-            ampmLabel.text = "PM"
-        }
-        else{
-            if hour == 0{ hour = 12}
-            HourLabel.text = String(hour)
-            ampmLabel.text = "AM"
-        }
-        timeZoneLabel.text = String((calendar.timeZone.secondsFromGMT() - Calendar.current.timeZone.secondsFromGMT()) / 3600) + " Hours Ahead Current TimeZone"
-        clock?.timePassed(hour: hour, minute: min, second: sec)
+        let modelReturnValues: (h: Int,m: Int,s: Int,ms: Int,ampm: String,timeAhead: String) = model.updateClock();
+        HourLabel.text = String(modelReturnValues.h)
+        MinuteLabel.text = String(modelReturnValues.m)
+        SecondLabel.text = String(modelReturnValues.s)
+        MilliLabel.text = String(modelReturnValues.ms)
+        ampmLabel.text = modelReturnValues.ampm
+        timeZoneLabel.text = modelReturnValues.timeAhead + " Hours Ahead Current TimeZone"
+        clock?.timePassed(hour: modelReturnValues.h, minute: modelReturnValues.m, second: modelReturnValues.s)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? TimeZoneViewController{
@@ -66,7 +50,7 @@ class ViewController: UIViewController, MainViewControllerDelegate{
     }
     
     func save(timeZone: String) {
-        calendar.timeZone = TimeZone(identifier: timeZone)!
+        model.setCalendarTimeZone(timeZone: TimeZone(identifier: timeZone)!)
     }
     
     

@@ -12,13 +12,14 @@ import UIKit
 class TimeZoneViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
-    private var timeZones: [String] = []
     private var delegate: MainViewControllerDelegate?
+    private var model: TimeZoneModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.model = TimeZoneModel()
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
-        timeZones = TimeZone.knownTimeZoneIdentifiers
+        
 
     }
     func setup(delegate: MainViewControllerDelegate){
@@ -30,19 +31,19 @@ class TimeZoneViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return timeZones.count
+        return model.getCount()
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return timeZones[row]
+        return model.getTimeZone(at: row)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        textField.text = timeZones[row]
+        textField.text = model.getTimeZone(at: row)
     }
     
     @IBAction func savePressed(_ sender: Any) {
-        guard let text = textField.text, timeZones.contains(text) else{return}
+        guard let text = textField.text, model.contains(text: text) else{return}
         delegate?.save(timeZone: text)
         navigationController?.popViewController(animated: true)
     }
