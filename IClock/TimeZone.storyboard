@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8sQ-Ou-u79">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Time Zone View Controller-->
+        <scene sceneID="yFV-Dx-gTQ">
+            <objects>
+                <viewController id="8sQ-Ou-u79" customClass="TimeZoneViewController" customModule="IClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wz7-0E-q0S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIt-zs-VYf">
+                                <rect key="frame" x="190" y="593" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePressed:" destination="8sQ-Ou-u79" eventType="touchUpInside" id="awk-84-vqg"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xc2-f9-0vE">
+                                <rect key="frame" x="0.0" y="299" width="414" height="216"/>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f7n-Z8-gPF">
+                                <rect key="frame" x="82" y="241" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="HD5-Ss-uzd"/>
+                                    <constraint firstAttribute="height" constant="50" id="zjn-7w-l2W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xc2-f9-0vE" firstAttribute="trailing" secondItem="M9D-jk-kiU" secondAttribute="trailing" id="NZe-DQ-C9N"/>
+                            <constraint firstItem="f7n-Z8-gPF" firstAttribute="top" secondItem="M9D-jk-kiU" secondAttribute="top" constant="197" id="UJ1-5s-XBZ"/>
+                            <constraint firstItem="Xc2-f9-0vE" firstAttribute="top" secondItem="f7n-Z8-gPF" secondAttribute="bottom" constant="8" id="fOb-l6-Wuk"/>
+                            <constraint firstItem="Xc2-f9-0vE" firstAttribute="leading" secondItem="M9D-jk-kiU" secondAttribute="leading" id="k0m-iY-QMO"/>
+                            <constraint firstItem="f7n-Z8-gPF" firstAttribute="centerX" secondItem="M9D-jk-kiU" secondAttribute="centerX" id="ugL-v1-Mhu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M9D-jk-kiU"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Xc2-f9-0vE" id="0FN-R9-PUj"/>
+                        <outlet property="textField" destination="f7n-Z8-gPF" id="DaV-Cd-JmR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcb-KX-zLM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86.956521739130437" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+</document>

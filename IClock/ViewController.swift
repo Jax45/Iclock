@@ -8,16 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol MainViewControllerDelegate {
+    func save(timeZone: String);
+}
 
+class ViewController: UIViewController, MainViewControllerDelegate{
+    
     @IBOutlet weak var mainView: MainView!
     @IBOutlet weak var HourLabel: UILabel!
     @IBOutlet weak var MinuteLabel: UILabel!
     @IBOutlet weak var SecondLabel: UILabel!
     @IBOutlet weak var MilliLabel: UILabel!
     @IBOutlet weak var ampmLabel: UILabel!
-    
-    
+    @IBOutlet weak var timeZoneLabel: UILabel!
+    private var calendar = Calendar.current
     var clockView = ClockView(frame: .zero)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +33,11 @@ class ViewController: UIViewController {
     @objc func updateClock(){
         let clock = mainView.subviews[0] as? ClockView
         let date = Date()
-        var hour = Calendar.current.component(.hour, from:date)
-        let min = Calendar.current.component(.minute, from:date)
-        let sec = Calendar.current.component(.second, from:date)
-        let ns = Calendar.current.component(.nanosecond, from: date)
+        
+        var hour = calendar.component(.hour, from:date)
+        let min = calendar.component(.minute, from:date)
+        let sec = calendar.component(.second, from:date)
+        let ns = calendar.component(.nanosecond, from: date)
         let ms = ns / 1000000
         
         
@@ -51,10 +56,18 @@ class ViewController: UIViewController {
             HourLabel.text = String(hour)
             ampmLabel.text = "AM"
         }
+        timeZoneLabel.text = String((calendar.timeZone.secondsFromGMT() - Calendar.current.timeZone.secondsFromGMT()) / 3600) + " Hours Ahead Current TimeZone"
         clock?.timePassed(hour: hour, minute: min, second: sec)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? TimeZoneViewController{
+            vc.setup(delegate: self)
+        }
+    }
     
-
+    func save(timeZone: String) {
+        calendar.timeZone = TimeZone(identifier: timeZone)!
+    }
     
     
 }

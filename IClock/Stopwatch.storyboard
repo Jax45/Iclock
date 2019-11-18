@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVQ-8Y-L5t">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stopwatch View Controller-->
+        <scene sceneID="T8z-Un-bYI">
+            <objects>
+                <viewController id="fVQ-8Y-L5t" customClass="StopwatchViewController" customModule="IClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqo-xB-ELJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gO-KJ-4ck">
+                                <rect key="frame" x="0.0" y="94" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="puR-yu-8gV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wI8-eq-Wh9">
+                                <rect key="frame" x="107" y="438" width="200" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZT-2I-00C">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="pW8-z3-P6w"/>
+                                        </constraints>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="StartStopPressed:" destination="fVQ-8Y-L5t" eventType="touchUpInside" id="cDy-F9-2pp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ds-Db-cY7">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="3Zy-tM-b5q"/>
+                                        </constraints>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="ResetPressed:" destination="fVQ-8Y-L5t" eventType="touchUpInside" id="uhj-za-aWy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wI8-eq-Wh9" firstAttribute="centerY" secondItem="ThS-vx-KUP" secondAttribute="centerY" id="9SU-88-xtx"/>
+                            <constraint firstItem="ThS-vx-KUP" firstAttribute="trailing" secondItem="2gO-KJ-4ck" secondAttribute="trailing" id="ayy-vJ-jLQ"/>
+                            <constraint firstItem="2gO-KJ-4ck" firstAttribute="leading" secondItem="ThS-vx-KUP" secondAttribute="leading" id="dJg-yg-PfJ"/>
+                            <constraint firstItem="2gO-KJ-4ck" firstAttribute="top" secondItem="ThS-vx-KUP" secondAttribute="top" constant="50" id="svh-pz-M8T"/>
+                            <constraint firstItem="wI8-eq-Wh9" firstAttribute="centerX" secondItem="ThS-vx-KUP" secondAttribute="centerX" id="w4t-Fq-uL1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ThS-vx-KUP"/>
+                    </view>
+                    <connections>
+                        <outlet property="ResetBtn" destination="5Ds-Db-cY7" id="ikV-PQ-NAC"/>
+                        <outlet property="StartStopBtn" destination="9ZT-2I-00C" id="Pxv-iW-v8t"/>
+                        <outlet property="TimeLabel" destination="2gO-KJ-4ck" id="0FO-du-UVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gip-m9-YOA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77" y="132"/>
+        </scene>
+    </scenes>
+</document>

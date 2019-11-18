@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44124A72238040B9009196D3 /* TimeZone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44124A71238040B9009196D3 /* TimeZone.storyboard */; };
+		44124A74238042A6009196D3 /* TimeZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44124A73238042A6009196D3 /* TimeZoneViewController.swift */; };
+		441D761E238192A500B45E7F /* Stopwatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441D761D238192A500B45E7F /* Stopwatch.storyboard */; };
+		441D7620238192C500B45E7F /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D761F238192C500B45E7F /* StopwatchViewController.swift */; };
 		445050F8237F6DF600B69F7F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445050F7237F6DF600B69F7F /* MainView.swift */; };
+		4494BBB02382DD4D00AF5CDA /* Todo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4494BBAF2382DD4D00AF5CDA /* Todo.rtf */; };
 		44D046AB237F56B000C0F570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046AA237F56B000C0F570 /* AppDelegate.swift */; };
 		44D046AD237F56B000C0F570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046AC237F56B000C0F570 /* SceneDelegate.swift */; };
 		44D046AF237F56B000C0F570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046AE237F56B000C0F570 /* ViewController.swift */; };
@@ -38,7 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44124A71238040B9009196D3 /* TimeZone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeZone.storyboard; sourceTree = "<group>"; };
+		44124A73238042A6009196D3 /* TimeZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneViewController.swift; sourceTree = "<group>"; };
+		441D761D238192A500B45E7F /* Stopwatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stopwatch.storyboard; sourceTree = "<group>"; };
+		441D761F238192C500B45E7F /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
 		445050F7237F6DF600B69F7F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4494BBAF2382DD4D00AF5CDA /* Todo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Todo.rtf; sourceTree = "<group>"; };
 		44D046A7237F56B000C0F570 /* IClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D046AA237F56B000C0F570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D046AC237F56B000C0F570 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +121,11 @@
 				44D046B0237F56B000C0F570 /* Main.storyboard */,
 				44D046DC237F598900C0F570 /* ClockView.swift */,
 				445050F7237F6DF600B69F7F /* MainView.swift */,
+				44124A71238040B9009196D3 /* TimeZone.storyboard */,
+				44124A73238042A6009196D3 /* TimeZoneViewController.swift */,
+				441D761D238192A500B45E7F /* Stopwatch.storyboard */,
+				441D761F238192C500B45E7F /* StopwatchViewController.swift */,
+				4494BBAF2382DD4D00AF5CDA /* Todo.rtf */,
 			);
 			path = IClock;
 			sourceTree = "<group>";
@@ -250,6 +265,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				44D046B7237F56B200C0F570 /* LaunchScreen.storyboard in Resources */,
+				44124A72238040B9009196D3 /* TimeZone.storyboard in Resources */,
+				4494BBB02382DD4D00AF5CDA /* Todo.rtf in Resources */,
+				441D761E238192A500B45E7F /* Stopwatch.storyboard in Resources */,
 				44D046B4237F56B200C0F570 /* Assets.xcassets in Resources */,
 				44D046B2237F56B000C0F570 /* Main.storyboard in Resources */,
 			);
@@ -280,7 +298,9 @@
 				445050F8237F6DF600B69F7F /* MainView.swift in Sources */,
 				44D046DD237F598900C0F570 /* ClockView.swift in Sources */,
 				44D046AB237F56B000C0F570 /* AppDelegate.swift in Sources */,
+				441D7620238192C500B45E7F /* StopwatchViewController.swift in Sources */,
 				44D046DF237F5A0D00C0F570 /* ClockLayer.swift in Sources */,
+				44124A74238042A6009196D3 /* TimeZoneViewController.swift in Sources */,
 				44D046AD237F56B000C0F570 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
