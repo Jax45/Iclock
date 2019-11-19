@@ -25,25 +25,5 @@ class ClockView: UIView {
         clockLayer.rotateTime(hour: transformHour, minute: transformMinute, second: transformSecond)
     }
     
-    
-    func compassDirectionPressed(_ direction: String) {
-        
-        let transform: CGAffineTransform
-        
-        switch direction.uppercased() {
-        case "N":
-            transform = CGAffineTransform(rotationAngle: CGFloat(4 * Double.pi) / 2.0)
-        case "E":
-            transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi) / 2.0)
-        case "S":
-            transform = CGAffineTransform(rotationAngle: CGFloat(2 * Double.pi) / 2.0)
-        case "W":
-            transform = CGAffineTransform(rotationAngle: CGFloat(3 * Double.pi) / 2.0)
-        default:
-            transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi) / 2.0)
-        }
-        
-        clockLayer.rotateArrowWithTransform(transform)
-    }
 
 }
