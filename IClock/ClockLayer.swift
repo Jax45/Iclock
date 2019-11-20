@@ -57,71 +57,29 @@ class ClockLayer: CALayer {
             twelveLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
             circle.addSublayer(twelveLayer)
             
-            let oneLayer = CATextLayer()
-            oneLayer.string = "1"
-            oneLayer.foregroundColor = UIColor.black.cgColor
-            oneLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(twelveLayer)
             
-            let twoLayer = CATextLayer()
-            twoLayer.string = "2"
-            twoLayer.foregroundColor = UIColor.black.cgColor
-            twoLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(twoLayer)
             
             let threeLayer = CATextLayer()
             threeLayer.string = "3"
             threeLayer.foregroundColor = UIColor.black.cgColor
-            threeLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
+            threeLayer.frame = CGRect(x: bounds.maxX - 40, y: bounds.midY - 20, width: 40, height: 40)
             circle.addSublayer(threeLayer)
             
-            let fourLayer = CATextLayer()
-            fourLayer.string = "12"
-            fourLayer.foregroundColor = UIColor.black.cgColor
-            fourLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(fourLayer)
-            
-            let fiveLayer = CATextLayer()
-            fiveLayer.string = "12"
-            fiveLayer.foregroundColor = UIColor.black.cgColor
-            fiveLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(fiveLayer)
             
             let sixLayer = CATextLayer()
-            sixLayer.string = "12"
+            sixLayer.string = "6"
             sixLayer.foregroundColor = UIColor.black.cgColor
-            sixLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
+            sixLayer.frame = CGRect(x: bounds.midX - 10, y: bounds.maxY - 40, width: 40, height: 40)
             circle.addSublayer(sixLayer)
             
-            let twelveLayer = CATextLayer()
-            twelveLayer.string = "12"
-            twelveLayer.foregroundColor = UIColor.black.cgColor
-            twelveLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(twelveLayer)
+           
             
-            let twelveLayer = CATextLayer()
-            twelveLayer.string = "12"
-            twelveLayer.foregroundColor = UIColor.black.cgColor
-            twelveLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(twelveLayer)
+            let nineLayer = CATextLayer()
+            nineLayer.string = "9"
+            nineLayer.foregroundColor = UIColor.black.cgColor
+            nineLayer.frame = CGRect(x: bounds.minX + 20, y: bounds.midY - 20, width: 40, height: 40)
+            circle.addSublayer(nineLayer)
             
-            let twelveLayer = CATextLayer()
-            twelveLayer.string = "12"
-            twelveLayer.foregroundColor = UIColor.black.cgColor
-            twelveLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(twelveLayer)
-            
-            let twelveLayer = CATextLayer()
-            twelveLayer.string = "12"
-            twelveLayer.foregroundColor = UIColor.black.cgColor
-            twelveLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(twelveLayer)
-            
-            let twelveLayer = CATextLayer()
-            twelveLayer.string = "12"
-            twelveLayer.foregroundColor = UIColor.black.cgColor
-            twelveLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(twelveLayer)
             
                 
             //}
