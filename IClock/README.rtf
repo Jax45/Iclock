@@ -1,0 +1,23 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Author: Jackson Hoenig\
+Class: CMPSCI 4222\
+Description:\
+	This is my third project for this class. it involves a clock that is displayed analog and digitally. the timezone can also be changed.\
+and there is a stopwatch function on another view. furthermore the current timezone and stopwatch settings are saved in persistance.\
+The whole project can be split into 3 parts\
+\
+Clock:\
+the clockviewcontroller controls all content in this view. it runs code in the clock model and after each runloop updates the clock that is drawn inside\
+the clockview as a subview of the mainview. that clockview then creates a sublayer of clocklayer. that clocklayer controls all of the uifunctionality seen on the analog clock. the digital clock is just manipulated with logic in the model and updated UI in the clockVC.\
+\
+Stopwatch:\
+the stopwatch works by using a similar run loop as the clock view, however it saves to persistance the starttime, the current time on the clock, and the updates from the clock running. because of this even when the app is terminated if the stopwatch was left on it will pick up where it left off. there is also a reset button that clears persistance that can only be tapped if the stopwatch is not running.\
+\
+TimeZone:\
+this is a view that just allows changing the timezone. once changed it is saved to userdefaults to persist the change. the change is then submitted through a delegate back to the clock view.}

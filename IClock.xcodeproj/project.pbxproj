@@ -16,7 +16,6 @@
 		44296B2523830ABC00470625 /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44296B2423830ABC00470625 /* ClockModel.swift */; };
 		44296B2723830B2700470625 /* TimeZoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44296B2623830B2700470625 /* TimeZoneModel.swift */; };
 		445050F8237F6DF600B69F7F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445050F7237F6DF600B69F7F /* MainView.swift */; };
-		4494BBB02382DD4D00AF5CDA /* Todo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4494BBAF2382DD4D00AF5CDA /* Todo.rtf */; };
 		44D046AB237F56B000C0F570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046AA237F56B000C0F570 /* AppDelegate.swift */; };
 		44D046AD237F56B000C0F570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046AC237F56B000C0F570 /* SceneDelegate.swift */; };
 		44D046AF237F56B000C0F570 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046AE237F56B000C0F570 /* ClockViewController.swift */; };
@@ -26,6 +25,7 @@
 		44D046C2237F56B200C0F570 /* IClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046C1237F56B200C0F570 /* IClockTests.swift */; };
 		44D046CD237F56B200C0F570 /* IClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046CC237F56B200C0F570 /* IClockUITests.swift */; };
 		44D046DD237F598900C0F570 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D046DC237F598900C0F570 /* ClockView.swift */; };
+		44E500CD2385C02B00606A4D /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 44E500CC2385C02B00606A4D /* README.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 		44296B2423830ABC00470625 /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
 		44296B2623830B2700470625 /* TimeZoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneModel.swift; sourceTree = "<group>"; };
 		445050F7237F6DF600B69F7F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		4494BBAF2382DD4D00AF5CDA /* Todo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Todo.rtf; sourceTree = "<group>"; };
 		44D046A7237F56B000C0F570 /* IClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D046AA237F56B000C0F570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D046AC237F56B000C0F570 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		44D046CC237F56B200C0F570 /* IClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClockUITests.swift; sourceTree = "<group>"; };
 		44D046CE237F56B200C0F570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44D046DC237F598900C0F570 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		44E500CC2385C02B00606A4D /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 				44296B1C238309C900470625 /* Clock */,
 				44296B1B238309C500470625 /* Stopwatch */,
 				44D046DB237F580700C0F570 /* Supporting Files */,
-				4494BBAF2382DD4D00AF5CDA /* Todo.rtf */,
+				44E500CC2385C02B00606A4D /* README.rtf */,
 			);
 			path = IClock;
 			sourceTree = "<group>";
@@ -299,9 +299,9 @@
 			files = (
 				44D046B7237F56B200C0F570 /* LaunchScreen.storyboard in Resources */,
 				44124A72238040B9009196D3 /* TimeZone.storyboard in Resources */,
-				4494BBB02382DD4D00AF5CDA /* Todo.rtf in Resources */,
 				441D761E238192A500B45E7F /* Stopwatch.storyboard in Resources */,
 				44D046B4237F56B200C0F570 /* Assets.xcassets in Resources */,
+				44E500CD2385C02B00606A4D /* README.rtf in Resources */,
 				44D046B2237F56B000C0F570 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

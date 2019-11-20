@@ -10,7 +10,17 @@ import Foundation
 
 class ClockModel {
     private var calendar = Calendar.current
+    private let defaults = UserDefaults.standard
+
+    init() {
+        if let identifier = defaults.value(forKey: "timeZone"){
+            calendar.timeZone = TimeZone(identifier: identifier as! String)!
+        }
+    }
     
+    func saveTimeZone(timeZoneName: String){
+        defaults.set(timeZoneName, forKey: "timeZone")
+    }
     
     func getCalendar() -> Calendar{
         return calendar

@@ -28,6 +28,7 @@ class ClockViewController: UIViewController, MainViewControllerDelegate{
         super.viewDidLoad()
         model = ClockModel()
         mainView.addSubview(clockView)
+        
         let displayLink = CADisplayLink(target: self, selector: #selector(updateClock))
         displayLink.add(to: .current, forMode: .common)
         // Do any additional setup after loading the view.
@@ -51,6 +52,8 @@ class ClockViewController: UIViewController, MainViewControllerDelegate{
     
     func save(timeZone: String) {
         model.setCalendarTimeZone(timeZone: TimeZone(identifier: timeZone)!)
+        model.saveTimeZone(timeZoneName: timeZone)
+        
     }
     
     

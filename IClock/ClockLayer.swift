@@ -36,53 +36,26 @@ class ClockLayer: CALayer {
 //        circle.position = CGPoint(x: bounds.midX, y: bounds.midY)
         
         if !addedCardinalPoints {
-//            let points = ["12","1","2","3","4","5","6","7","8","9","10","11"]
-//
-//            for index in 0..<points.count {
-//                let textLayer = CATextLayer()
-//                textLayer.font = UIFont.init(name: "Cochin", size: 14)
-//                    textLayer.string = points[index]
-//                            //textLayer.backgroundColor = UIColor.orange.withAlphaComponent(0.5).cgColor
-//                textLayer.bounds = CGRect(x: 0, y: 0, width: 70, height: 40)
-//                textLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
-//                let vertex: CGFloat = circle.bounds.midY / textLayer.bounds.height
-//
-//                textLayer.anchorPoint = CGPoint(x: 0.5, y: vertex)
-//                textLayer.alignmentMode = .center
-//                textLayer.foregroundColor = UIColor.black.cgColor
-//                textLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(Double(index) * .pi / 6.0)))
-            let twelveLayer = CATextLayer()
-            twelveLayer.string = "12"
-            twelveLayer.foregroundColor = UIColor.black.cgColor
-            twelveLayer.frame = CGRect(x: bounds.midX - 20, y: bounds.minY, width: 40, height: 40)
-            circle.addSublayer(twelveLayer)
+            let points = ["12","1","2","3","4","5","6","7","8","9","10","11"]
+
+            for index in 0..<points.count {
+               let textLayer = CATextLayer()
+                textLayer.font = UIFont.init(name: "Cochin", size: 14)
+                    textLayer.string = points[index]
+                            //textLayer.backgroundColor = UIColor.orange.withAlphaComponent(0.5).cgColor
+                textLayer.bounds = CGRect(x: 0, y: 0, width: 70, height: 40)
+                textLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+                let vertex: CGFloat = circle.bounds.midY / textLayer.bounds.height
+
+                textLayer.anchorPoint = CGPoint(x: 0.5, y: vertex)
+                textLayer.alignmentMode = .center
+                textLayer.foregroundColor = UIColor.black.cgColor
+                textLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(Double(index) * .pi / 6.0)))
             
             
-            
-            let threeLayer = CATextLayer()
-            threeLayer.string = "3"
-            threeLayer.foregroundColor = UIColor.black.cgColor
-            threeLayer.frame = CGRect(x: bounds.maxX - 40, y: bounds.midY - 20, width: 40, height: 40)
-            circle.addSublayer(threeLayer)
-            
-            
-            let sixLayer = CATextLayer()
-            sixLayer.string = "6"
-            sixLayer.foregroundColor = UIColor.black.cgColor
-            sixLayer.frame = CGRect(x: bounds.midX - 10, y: bounds.maxY - 40, width: 40, height: 40)
-            circle.addSublayer(sixLayer)
-            
-           
-            
-            let nineLayer = CATextLayer()
-            nineLayer.string = "9"
-            nineLayer.foregroundColor = UIColor.black.cgColor
-            nineLayer.frame = CGRect(x: bounds.minX + 20, y: bounds.midY - 20, width: 40, height: 40)
-            circle.addSublayer(nineLayer)
-            
-            
+                circle.addSublayer(textLayer)
                 
-            //}
+            }
             addedCardinalPoints = true
         }
         
